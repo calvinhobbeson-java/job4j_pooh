@@ -32,7 +32,7 @@ public class TopicSchema implements Schema {
                 var receiversByQueue = receivers.get(queueKey);
                 var it = receiversByQueue.iterator();
                 while (it.hasNext()) {
-                    while (!queue.isEmpty()) {
+                     while (!queue.isEmpty()) {
                         var data = queue.poll();
                         if (data != null) {
                             it.next().receive(data);
